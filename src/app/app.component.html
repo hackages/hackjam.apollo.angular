@@ -1,0 +1,64 @@
+<!-- Header Component -->
+<header>
+  <img src="../assets/images/hackflix_logo.svg" alt="logo" />
+</header>
+
+<!-- Main component -->
+<main class="main-content">
+  <!-- Filters or Categories component -->
+  <div class="tab-filter-wrapper">
+    <div class="tab-filter">
+      <div class="filters">
+        <ul class="filters-list">
+          <li
+            ngFor="let category in categories"
+            click="switchCategory(category)"
+          >
+            <a class="selected">
+              category.name
+            </a>
+          </li>
+        </ul>
+        <ul class="misc">
+          <!-- Counter Component -->
+          <li class="counter">
+            <a>movies.length</a>
+          </li>
+          <!-- End of Counter Component -->
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- MovieList component -->
+  <!--Add the class 'filter-is-visible' is toggleNav is true-->
+  <section class="gallery">
+    <!-- Movie Component -->
+    <div *ngFor="let movie of movies" class="movie">
+      <img
+        [alt]="movie.title"
+        src="{{ PICTURES_CDN_URL + movie.poster_path }}"
+      />
+    </div>
+    <!-- End of Movie component -->
+  </section>
+
+  <!-- NavBar Component -->
+  <div>
+    <!--Add the class 'filter-is-visible' is toggleNav is true-->
+    <div class="filter">
+      <form>
+        <div class="filter-block">
+          <h4>Search</h4>
+          <div class="filter-content">
+            <input type="search" placeholder="title" />
+          </div>
+        </div>
+      </form>
+    </div>
+    <a class="hand-cursor filter-trigger" click="toggle">
+      !toggleNav ? 'Open Filters' : 'Close Filters'
+    </a>
+  </div>
+  <!-- End of NavBar Component -->
+</main>
