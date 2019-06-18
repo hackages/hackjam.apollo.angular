@@ -1,0 +1,19 @@
+<div class="tab-filter-wrapper">
+  <div class="tab-filter">
+    <div class="filters">
+      <ul class="filters-list">
+        <li
+          *ngFor="let category of categories"
+          (click)="switchCategory(category.name)"
+        >
+          <a [class.selected]="category.selected">
+            {{ category.name }}
+          </a>
+        </li>
+      </ul>
+      <ul class="misc">
+        <hf-counter [count]="count"></hf-counter>
+      </ul>
+    </div>
+  </div>
+</div>

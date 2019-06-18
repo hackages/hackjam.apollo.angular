@@ -1,0 +1,22 @@
+<main class="main-content">
+  <hf-categories-menu
+    [count]="movies.length"
+    [switchCategory]="switchCategory"
+    [categories]="categories"
+  ></hf-categories-menu>
+
+  <hf-movies-list
+    [movies]="movies"
+    [toggleNav]="toggleNav"
+    [pictureUrl]="pictureUrl"
+  >
+  </hf-movies-list>
+
+  <hf-navbar
+    [toggle]="toggle"
+    [toggleNav]="toggleNav"
+    (searchEmitter)="search($event)"
+  >
+    ></hf-navbar
+  >
+</main>

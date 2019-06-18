@@ -1,0 +1,5 @@
+<section class="gallery" [class.filter-is-visible]="toggleNav">
+  <div *ngFor="let movie of movies" class="movie">
+    <hf-movie [pictureUrl]="pictureUrl" [movie]="movie"></hf-movie>
+  </div>
+</section>
