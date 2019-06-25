@@ -1,9 +1,12 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'hf-counter',
-  templateUrl: './counter.component.html',
-  styleUrls: ['./counter.component.css']
+  template: `
+    <li class="counter">
+      <a>{{ count }}</a>
+    </li>
+  `
 })
 export class CounterComponent {
   @Input() count: number = 0;

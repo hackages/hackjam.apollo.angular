@@ -3,8 +3,7 @@ import { IMovie } from 'src/types/movie.type';
 
 @Component({
   selector: 'hf-movies-list',
-  templateUrl: './movies-list.component.html',
-  styleUrls: ['./movies-list.component.css']
+  templateUrl: './movies-list.component.html'
 })
 export class MoviesListComponent {
   @Input() movies: IMovie[] = [];

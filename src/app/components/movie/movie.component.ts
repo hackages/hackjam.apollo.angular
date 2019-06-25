@@ -3,8 +3,7 @@ import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'hf-movie',
-  templateUrl: './movie.component.html',
-  styleUrls: ['./movie.component.css']
+  templateUrl: './movie.component.html'
 })
 export class MovieComponent {
   @Input() movie: IMovie;

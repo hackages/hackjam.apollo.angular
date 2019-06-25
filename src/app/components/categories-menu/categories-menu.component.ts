@@ -3,8 +3,7 @@ import { ICategory } from 'src/types/category.type';
 
 @Component({
   selector: 'hf-categories-menu',
-  templateUrl: './categories-menu.component.html',
-  styleUrls: ['./categories-menu.component.css']
+  templateUrl: './categories-menu.component.html'
 })
 export class CategoriesMenuComponent {
   @Input() categories: ICategory[] = [];
